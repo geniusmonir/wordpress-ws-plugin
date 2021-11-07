@@ -29,9 +29,7 @@ get_header(); ?>
             <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
             </div>
         </div>
-  <?php }
-  echo paginate_links();
-?>
+  <?php } ?>
 </div>
 
 <?php get_footer();

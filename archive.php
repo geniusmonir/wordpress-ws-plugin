@@ -29,9 +29,7 @@ get_header(); ?>
       </div>
 
     </div>
-  <?php }
-  echo paginate_links();
-?>
+  <?php } ?>
 </div>
 
 <?php get_footer();
