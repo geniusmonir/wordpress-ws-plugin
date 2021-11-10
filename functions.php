@@ -191,3 +191,12 @@ function makeNotePrivate($data, $postarr) {
 }
 
 add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
+
+
+
+// EXCLUDE NODE MODULES
+add_filter( 'ai1wm_exclude_themes_from_export',
+function ( $exclude_filters ) {
+  $exclude_filters[] = 'fictional-university-theme/node_modules'; // insert your theme name
+  return $exclude_filters;
+} );
