@@ -110,3 +110,25 @@ function universityMapKey($api){
 }
 
 add_filter('acf/fields/google_map/api', 'universityMapKey');
+
+// Redirect subscriber acccounts out of admin and on to homepage
+
+function redirectSubsToFE(){
+  $ourCurrentUser = wp_get_current_user();
+  if(count($ourCurrentUser->roles) === 1 AND $ourCurrentUser->roles[0]==='subscriber'){
+    wp_redirect(site_url('/'));
+    exit;
+  }
+}
+
+add_action('admin_init', 'redirectSubsToFE');
+
+
+function noSubsAdminBar(){
+  $ourCurrentUser = wp_get_current_user();
+  if(count($ourCurrentUser->roles) === 1 AND $ourCurrentUser->roles[0]==='subscriber'){
+    show_admin_bar(false);
+  }
+}
+
+add_action('wp_loaded', 'noSubsAdminBar');
