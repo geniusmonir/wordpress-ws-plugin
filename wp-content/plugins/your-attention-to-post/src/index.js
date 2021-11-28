@@ -3,10 +3,11 @@ wp.blocks.registerBlockType('ourplugin/your-attention-to-post', {
   icon: 'smiley',
   category: 'common',
   edit: function () {
-    return wp.element.createElement(
-      'h3',
-      null,
-      'Hello, this is from the admin editor screen.'
+    return (
+      <div>
+        <p>Hello, this is a paragraph.</p>
+        <h4>Hi there.</h4>
+      </div>
     );
   },
   save: function () {
