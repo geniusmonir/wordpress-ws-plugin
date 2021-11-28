@@ -11,6 +11,11 @@ wp.blocks.registerBlockType('ourplugin/your-attention-to-post', {
     );
   },
   save: function () {
-    return wp.element.createElement('h1', null, 'This is the frontend.');
+    return (
+      <>
+        <p>Hello, this is a paragraph front end.</p>
+        <h4>Hi there front end.</h4>
+      </>
+    );
   },
 });
