@@ -295,7 +295,8 @@ function Quiz(props) {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
     className: "paying-attention-frontend",
     style: {
-      backgroundColor: props.bgColor
+      backgroundColor: props.bgColor,
+      textAlign: props.theAlignment
     }
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("p", null, props.question), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("ul", null, props.answers.map(function (answer, index) {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("li", {
